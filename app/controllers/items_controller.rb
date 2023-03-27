@@ -33,7 +33,7 @@ class ItemsController < ApplicationController
   end
 
   def find_item
-    Item.find(params[:id])
+    Item.find_by!(id: params[:id])
   end
 
   def item_params
